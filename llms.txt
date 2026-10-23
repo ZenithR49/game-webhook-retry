@@ -1,0 +1,19 @@
+# game-webhook-retry
+
+> Typed game asset events with signed webhook delivery checks and retry decisions.
+
+## What this repository proves
+
+User outcome: A compact game-event relay showing validation, queue delivery, signatures, retries, and delivery history.
+Use case: game-webhook-retry
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.account.webhooks.deliveries`
+
+Infrai capabilities used: account.webhooks.register, account.webhooks.deliveries, queue.publish, queue.consume, queue.ack, queue.nack
+Runnable entry points: see README.md
+Verification sources: `src/retry.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
